@@ -17,14 +17,17 @@ urlpatterns = [
     path("users/", include("dethinker.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
+    path('api/questions/', include("questions.urls")),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # API URLS
 urlpatterns += [
     # API base url
-    path("api/", include("config.api_router")),
+    path("api/", include("config.api_router", )),
     # DRF auth token
     path("auth-token/", obtain_auth_token),
+    
 ]
 
 if settings.DEBUG:
