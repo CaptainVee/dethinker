@@ -17,7 +17,7 @@ urlpatterns = [
     path("users/", include("dethinker.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
-    path('api/questions/', include("questions.urls")),
+    path('questions/', include("question.urls")),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

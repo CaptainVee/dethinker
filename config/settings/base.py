@@ -64,6 +64,7 @@ DJANGO_APPS = [
     # "django.contrib.humanize", # Handy template tags
     "django.contrib.admin",
     "django.forms",
+    # "dethinker.question.apps.QuestionAppConfig",
 ]
 THIRD_PARTY_APPS = [
     "crispy_forms",
@@ -74,11 +75,15 @@ THIRD_PARTY_APPS = [
     "rest_framework",
     "rest_framework.authtoken",
     "corsheaders",
-    "questions",
+    # "dethinker.question.apps.QuestionAppConfig",
+
 ]
 
 LOCAL_APPS = [
     "dethinker.users",
+    "question.apps.QuestionConfig",
+
+
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
